@@ -15,7 +15,7 @@ jobs:
     steps:
         - run: |- 
             echo 'Pretending to build...'
-            sleep 5s  // Simulate work
+            sleep 5s  #Simulate work
 
   Result:
     runs-on: ubuntu-latest
