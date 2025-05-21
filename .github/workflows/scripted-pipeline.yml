@@ -11,7 +11,7 @@ jobs:
 
   Build:
     runs-on: ubuntu-latest
-    needs: Greet
+    #needs: Greet
     steps:
         - run: |- 
             echo 'Pretending to build...'
