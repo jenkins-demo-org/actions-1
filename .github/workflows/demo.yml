@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #- uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Welcome Message
+        run: echo "My first GitHub Action Job"
+
+      - name: List files on repo
+        run: ls
+
+      - name: Read File
+        run: cat README.md
