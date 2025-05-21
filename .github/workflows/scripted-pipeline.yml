@@ -1,0 +1,25 @@
+name: Scripted Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Greet:
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo 'Hello, World!'
+
+  Build:
+    runs-on: ubuntu-latest
+    needs: Greet
+    steps:
+        - run: |- 
+            echo 'Pretending to build...'
+            sleep 5  // Simulate work
+
+  Result:
+    runs-on: ubuntu-latest
+    needs: [Build] 
+    steps:
+        - run: |- 
+            echo "Job completed at $(date)"
